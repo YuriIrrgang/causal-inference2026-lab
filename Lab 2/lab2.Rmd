@@ -99,6 +99,7 @@ dseparated(dag_med, "X", "Y", "Z")            # TRUE  (independent given Z)
 dag_confound <- dagitty("dag {
   Z -> X
   Z -> Y
+  X -> Y
 }")
 
 ggdag(dag_confound) + theme_dag()
@@ -109,6 +110,7 @@ ggdag(dag_confound) + theme_dag()
 dag_confound <- dagify(
   X ~ Z,
   Y ~ Z,
+  X ~ Y,  # optional for visualization; not a causal edge
   exposure = "X",
   outcome  = "Y",
   labels = c(X = "X", Y = "Y", Z = "Z")
