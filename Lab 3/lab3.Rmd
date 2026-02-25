@@ -13,6 +13,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
+  root.dir = here::here(),
   echo = TRUE,
   message = FALSE,
   warning = FALSE,
@@ -320,7 +321,7 @@ Goal: keep only the replication-package components relevant to *today’s topics
 
 ## 11.1 Figure 1: Average treatment effects and CATEs of treatment on 2020 turnout under three inverse probability-weighted regression specifications
 ```{r fig1}
-source('helper_file.R')
+source('Lab 3/helper_file.R')
 
 # load data and uncount
 aggregated_set <- read_rds(file = "Lab 3/aggregated_analysis_set.rds")
@@ -621,7 +622,7 @@ g
 
 ## 11.2 Figure 5: Balance on pre-treatment covariates
 ```{r fig5}
-source('helper_file.R')
+source('Lab 3/helper_file.R')
 
 # load data and uncount
 aggregated_set <- read_rds(file = "Lab 3/aggregated_analysis_set.rds")
