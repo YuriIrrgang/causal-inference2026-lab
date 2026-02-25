@@ -287,7 +287,7 @@ modelsummary(
 )
 ```
 
-```{r precision}
+```{r precision 2}
 iv_adj_r <- iv_robust(
   Y_obs ~ D + age + female + baseline_interest |
     Z + age + female + baseline_interest,
